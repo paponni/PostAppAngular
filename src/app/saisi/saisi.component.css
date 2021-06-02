@@ -1,0 +1,69 @@
+
+.content{
+    margin-top: 12px;
+    height :50px;
+    width: 350px;
+    background-color: royalblue;
+}
+
+.bar-saisi{
+
+   margin: 0 auto;
+   width: 300px;
+}
+.form-control{
+
+    width: 400px;
+    margin: 12px;
+    height: 100px;
+}
+.btn{
+    margin-left: 20px;
+}
+.panel{
+    margin: 12px;
+    width: 600px;
+    
+}
+
+.file_image{
+    margin:12px ;
+}
+
+.image_profile{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.profil_name{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.panel{
+    border-bottom:none ;
+  
+}
+
+hr{
+   border-color: blue;
+}
+.contenu_commentaires{
+    visibility: none;
+    
+}
+.comments{
+   margin-left: 12px;
+
+}
+.champs-comments{
+    width: 100%;
+
+}
+
+
+

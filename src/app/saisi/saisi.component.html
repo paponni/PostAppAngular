@@ -1,0 +1,58 @@
+<div class="bar-saisi">
+    <form action="">
+
+        <input type="text" 
+        name="post" 
+        placeholder="tell us what you think !"
+        [(ngModel)]="inputPost" class="form-control"/>
+        
+        <input type="submit" value="poster" (click)="addPost()" class="btn btn-success">
+      <div class="image-container">
+        <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+  
+
+       <div class="file_image">
+        <input type="file" name="image" (change)="selectFile($event)" >
+       </div> 
+
+      </div>  
+    </form>
+        
+        <div class="panel panel-primary" *ngFor="let post of posts">
+
+            <div class="panel-heading">
+                
+                <img  class="image_profile" src="https://i.imgur.com/EAdIRPA.png" alt="profile_photo">
+               <span class="profil_name">Mamoun Mohamed</span> 
+              
+            </div>
+
+            <div [ngSwitch]="post.isImage">
+                    <div *ngSwitchCase="true">
+
+
+                            <div class="panel-body">
+
+                                
+                                <img class="img-responsive" style="width:500px;height:400px;"src="{{post.content}}" class="img-rounded">
+                                
+                            </div>
+                    </div>
+                    <div  *ngSwitchCase="false">
+                        <div class="panel-body">{{post.content}}</div>
+                    
+                            
+                    </div>
+                    
+                </div>
+                
+                <hr>
+                <button (click)="displayComments()" class="comments">{{post.commentaires.length}} comments</button>
+               
+                <div class="contenu_commentaires" *ngFor="let cmt of posts[0].commentaires">{{cmt.commentaire}}</div>
+                <input type="text" class="champs-comments" name="commentaire" id="" placeholder="ajouter un commentaire">
+                <hr>
+        </div>
+        
+
+</div>
