@@ -78,16 +78,29 @@ hr{
 
 }
 .champs-comments{
+    background-color: transparent;
     width: 94%;
-
+    height: 30px;
+    border: 1px solid #DCDCDC;
+    border-radius: 12px;
 }
 .contenu_commentaires{
+    margin-top: 5px;
     margin-left:12px ;
     margin-bottom: 12px;
     font-size: 15px;
-    background-color: #DCDCDC;
+    background-color: transparent;
 
 
+}
+
+.btn-commenter{
+    background-color: transparent;
+    border: 1px solid #DCDCDC;
+    width: 30px;
+}
+.btn-commenter:hover{
+    background-color: aliceblue;
 }
 
 
