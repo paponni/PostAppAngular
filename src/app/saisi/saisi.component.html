@@ -47,11 +47,15 @@
                 </div>
                 
                 <hr>
-                <button (click)="displayComments()" class="comments">{{post.commentaires.length}} comments</button>
-               
-                <div class="contenu_commentaires" *ngFor="let cmt of posts[0].commentaires">{{cmt.commentaire}}</div>
-                <input type="text" class="champs-comments" name="commentaire" id="" placeholder="ajouter un commentaire">
+                
+
+                <div class="contenu_commentaires" *ngFor="let cmt of posts[post.id-1].commentaires"><img  class="image_profile_cmt" src="https://i.imgur.com/EAdIRPA.png" alt="profile_photo">               <span class="profil_name_cmt">Mamoun Mohamed</span> <br>
+                    {{cmt.commentaire}}</div>
+                <input type="text" class="champs-comments" name="commentaire"  placeholder="ajouter un commentaire" [(ngModel)]="inputComment"> <button (click)="commenter(post.id-1)">></button>
                 <hr>
+         
+                
+                
         </div>
         
 

@@ -11,38 +11,27 @@ export class SaisiComponent implements OnInit {
 
   posts:Post[];
   inputPost:any;
+  inputComment:any;
   isImagef:boolean=false;
 
  // url:any ;
   msg:string="";
   
 
-  constructor() { }
+constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
 
     this.posts=[
-      {
-        content : " first post",
-        isImage:false ,
-        commentaires : [ 
-          {
-          commentaire : " hamd"
-        },
-        {
-          commentaire : "hmmmm ma3lina"
-        }, {
-          commentaire : "chi like la page fb"
-        }
-          ]
-      } ]
+       ]
        
     
      
   }
   addPost(){
     this.posts.push({
-      content : this.inputPost,
+      id : this.posts.length+1, 
+     content : this.inputPost,
       isImage : this.isImagef,
       commentaires : []
     }
@@ -74,13 +63,16 @@ export class SaisiComponent implements OnInit {
 
   }
 
-  displayComments(){
-    alert("bb");
-    
 
+  commenter(e){
 
+    this.posts[e].commentaires.push({
+      commentaire : this.inputComment
 
+    })
+    this.inputComment=""
   }
+ 
   
 
 }

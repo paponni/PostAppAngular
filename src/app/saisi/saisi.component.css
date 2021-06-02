@@ -36,12 +36,30 @@
     cursor: pointer;
     border-radius: 50%;
 }
+.image_profile_cmt{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+}
 .profil_name{
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 12px;
     font-size: 17px;
     font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
+}
+.profil_name_cmt{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 9px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.profil_name_cmt:hover{
+    color : blue;
 }
 
 .panel{
@@ -52,16 +70,23 @@
 hr{
    border-color: blue;
 }
-.contenu_commentaires{
-    visibility: none;
-    
-}
+
+
+
 .comments{
    margin-left: 12px;
 
 }
 .champs-comments{
-    width: 100%;
+    width: 94%;
+
+}
+.contenu_commentaires{
+    margin-left:12px ;
+    margin-bottom: 12px;
+    font-size: 15px;
+    background-color: #DCDCDC;
+
 
 }
 
